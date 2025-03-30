@@ -5,6 +5,11 @@ yarn dev
 # Установка и запуск в docker контейнере
 docker compose up
 
+# Если внутри docker конейнера не подтягивается модуль
+docker ps (узнаём container_id)
+docker exec -it <container_id> /bin/sh (попадаем внутрь)
+yarn install
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
