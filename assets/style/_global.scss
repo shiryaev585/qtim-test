@@ -1,0 +1,53 @@
+@use '~/assets/fonts/fonts.scss';
+
+$font-main: 'TTCommons', sans-serif;
+
+$c-dark: #101010;
+$c-white: #fff;
+$c-grey: #868686;
+$c-light-grey: #F3F3F3;
+$c-light-purple: #E2BEFF;
+
+$easeOut: cubic-bezier(.23,.56,.75,.89);
+
+$xs: 768px;
+$sm: 1024px;
+$lg: 1440px;
+
+@mixin xs-up {
+    @media only screen and (min-width: $xs) {
+        @content;
+    }
+}
+
+@mixin sm-up {
+    @media only screen and (min-width: $sm) {
+        @content;
+    }
+}
+
+@mixin lg-up {
+    @media only screen and (min-width: $lg) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
+    }
+}
+
+@mixin centered($pos) {
+    display: flex;
+    align-items: center;
+    justify-content: $pos;
+}
