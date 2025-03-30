@@ -1,14 +1,21 @@
 # Установка и запуск через yarn
+```bash
 yarn install
+
 yarn dev
+```
 
 # Установка и запуск в docker контейнере
+```bash
 docker compose up
+```
 
 # Если внутри docker конейнера не подтягивается модуль
+```bash
 docker ps (узнаём container_id)
 docker exec -it <container_id> /bin/sh (попадаем внутрь)
 yarn install
+```
 
 # Nuxt Minimal Starter
 
